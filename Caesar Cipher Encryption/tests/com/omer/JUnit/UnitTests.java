@@ -18,7 +18,6 @@ public class UnitTests {
 	@Test
 	public void testEncryptToCaesar() {
 		CaesarCipher tester = new CaesarCipher();
-		tester.init();
 		assertEquals("Encrypt \"ABCDEF\" to \"BCDEFG\" with a shift of 1", tester.encryptToCaesar(1, "ABCDEF"), "BCDEFG");
 		assertEquals("Encrypt \"abcdef\" to \"defghi\" with a shift of 3", tester.encryptToCaesar(3, "abcdef"), "defghi");
 		assertEquals("Encrypt \"A BCDEF\" to \"B CDEFG\" with a shift of 1", tester.encryptToCaesar(1, "A BCDEF"), "B CDEFG");
@@ -29,7 +28,6 @@ public class UnitTests {
 	@Test
 	public void testDecryptFromCaesar() {
 		CaesarCipher tester = new CaesarCipher();
-		tester.init();
 		assertEquals("Encrypt \"BCDEFG\" to \"ABCDEF\" with a shift of 1", tester.decryptFromCaesar("BCDEFG", 1), "ABCDEF");
 		assertEquals("Encrypt \"defghi\" to \"abcdef\" with a shift of 3", tester.decryptFromCaesar("defghi", 3), "abcdef");
 		assertEquals("Encrypt \"B CDEFG\" to \"A BCDEF\" with a shift of 1", tester.decryptFromCaesar("B CDEFG", 1), "A BCDEF");
